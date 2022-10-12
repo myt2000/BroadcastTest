@@ -22,6 +22,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.button.setOnClickListener {
+            val intent = Intent("com.brooks.broadcasttest.MY_BROADCAST")
+            intent.setPackage(packageName)
+            sendBroadcast(intent)
+        }
+
         val intentFilter = IntentFilter()
         intentFilter.addAction("android.intent.action.TIME_TICK")
 
