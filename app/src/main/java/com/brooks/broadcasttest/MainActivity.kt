@@ -25,7 +25,8 @@ class MainActivity : AppCompatActivity() {
         binding.button.setOnClickListener {
             val intent = Intent("com.brooks.broadcasttest.MY_BROADCAST")
             intent.setPackage(packageName)
-            sendBroadcast(intent)
+//            sendBroadcast(intent)
+            sendOrderedBroadcast(intent, null)
         }
 
         val intentFilter = IntentFilter()

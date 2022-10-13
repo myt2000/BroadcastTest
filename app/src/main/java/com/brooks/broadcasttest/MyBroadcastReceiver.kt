@@ -5,10 +5,10 @@ import android.content.Context
 import android.content.Intent
 import android.widget.Toast
 
-class AnotherBroadcastReceiver : BroadcastReceiver() {
+class MyBroadcastReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
-        Toast.makeText(context, "received in Another BroadcastReceiver", Toast.LENGTH_LONG).show()
-
+       Toast.makeText(context, "received in MyBroadcastReceiver", Toast.LENGTH_SHORT).show()
+        abortBroadcast()
     }
 }
